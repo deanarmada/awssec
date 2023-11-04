@@ -1,6 +1,0 @@
-POSTGRES_USER=hacksite-django
-POSTGRES_PASSWORD=hacksite-django
-POSTGRES_DB=hacksite-django
-POSTGRES_PORT=5432
-POSTGRES_SERVICE=hacksite-django-db
-C_FORCE_ROOT=True
