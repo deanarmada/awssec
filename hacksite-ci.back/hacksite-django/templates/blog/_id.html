@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load widget_tweaks %}
+
+{% block content %}
+    <!-- <div class="row">
+        <div class="col">
+            <a href="{% url 'index' %}">
+                <h3><- Go back to home</h3>
+            </a>
+        </div>
+    </div> -->
+    <div class="container >
+        <div class="row>
+            <div class="col text-center" ">
+                <img src="{{ blog.image.url }}"
+                     class="w-50" alt="{{ blog.title }}"
+                     style="max-height: 400px">
+            </div>
+        </div>
+        <!-- <div class="row mt-2 text-white">
+            <div class="col">
+                <h1>{{ blog.title }}</h1>
+            </div>
+        <div class="row mt-3 mb-4 text-white">
+            <div class="col">
+                <p>{{ blog.content }}</p>
+            </div>
+        </div>
+        <hr />
+        <div class="row mt-2 text-white">
+            <div class="col">
+                <h2>Comments</h2>
+            </div>
+        </div> -->
+        <div class="row mt-4">
+            <div class="col text-end">
+                <form method="post">
+                    {% csrf_token %}
+                    {% for field in form %}
+                        {{ field|attr:"class:form-control"|attr:"rows:4" }}
+                    {% endfor %}
+                    <input type="submit"
+                           value="Submit"
+                           id="submit-button"
+                           class="btn px-4 mt-3">
+                </form>
+            </div>
+        </div>
+        <div id="comment-section" class="text-white">
+            {% for comment in comments %}
+                <div class="row border-dark border-top pt-3 mb-4" style="border-color: white !important" >
+                    <div class="col">
+                        <h4>{{ comment.user }}</h4>
+                        <p>{{ comment.comment|safe }}</p>
+                        <i>{{ comment.timestamp }}</i>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

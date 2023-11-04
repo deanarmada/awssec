@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container">
+        <div class="row mb-2 text-white">
+            {% for blog in blogs %}
+                <div class="col-md-6">
+                  <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
+                      <div class="col-auto">
+                        <img src="{{ blog.image.url }}"
+                             class="img-fluid" alt="{{ blog.title }}">
+                      </div>
+                      <div class="col p-4 d-flex flex-column position-static">
+                      <h3 class="mb-0">{{ blog.title }}</h3>
+                      <div class="mb-1 text-muted">{{ blog.timestamp }}</div>
+                      <p class="card-text mb-auto">{{ blog.content|truncatechars:100 }}</p>
+                      <a href="{% url 'blog:detail' blog.id %}"
+                         class="stretched-link">
+                          Continue reading
+                      </a>
+                    </div>
+                  </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

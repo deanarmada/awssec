@@ -1,0 +1,5 @@
+Django==4.0.1
+psycopg2==2.9.3
+colorlog==6.6.0
+pillow==9.0.0
+django-widget-tweaks==1.4.12
