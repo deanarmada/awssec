@@ -1,0 +1,24 @@
+version: "3.8"
+services:
+  hacksite-django-db:
+    restart: always
+    image: postgres:14.1
+    volumes:
+      - ./hacksite-django-db/data:/var/lib/postgresql/data
+    env_file:
+      - ./env/.env
+      - ./env/.hacksite-django
+  hacksite-django:
+    restart: always
+    image: deanchrisarmada/zurien-hacksite:latest
+    build:
+      context: ./hacksite-django
+    env_file:
+      - ./env/.env
+      - ./env/.hacksite-django
+    ports:
+      - target: 8000
+        published: 8000
+        mode: host
+    volumes:
+      - ./hacksite-django:/usr/src/app/

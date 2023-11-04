@@ -1,0 +1,195 @@
+/* stylelint-disable selector-list-comma-newline-after */
+
+body{
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.blog-header {
+  line-height: 1;
+  /*border-bottom: 1px solid #e5e5e5;*/
+}
+
+.blog-header-logo {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.blog-header-logo:hover {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+}
+
+.display-4 {
+  font-size: 2.5rem;
+}
+@media (min-width: 768px) {
+  .display-4 {
+    font-size: 3rem;
+  }
+}
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.nav-scroller .nav-link {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  font-size: .875rem;
+}
+
+.card-img-right {
+  height: 100%;
+  border-radius: 0 3px 3px 0;
+}
+
+.flex-auto {
+  flex: 0 0 auto;
+}
+
+.h-250 { height: 250px; }
+@media (min-width: 768px) {
+  .h-md-250 { height: 250px; }
+}
+
+/* Pagination */
+.blog-pagination {
+  margin-bottom: 4rem;
+}
+.blog-pagination > .btn {
+  border-radius: 2rem;
+}
+
+/*
+ * Blog posts
+ */
+.blog-post {
+  margin-bottom: 4rem;
+}
+.blog-post-title {
+  margin-bottom: .25rem;
+  font-size: 2.5rem;
+}
+.blog-post-meta {
+  margin-bottom: 1.25rem;
+  color: #727272;
+}
+
+/*
+ * Footer
+ */
+.blog-footer {
+  padding: 2.5rem 0;
+  color: #727272;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: .05rem solid #e5e5e5;
+}
+.blog-footer p:last-child {
+  margin-bottom: 0;
+}
+
+#header-container{
+  background-image: url("/static/images/top-banner.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#main-container{
+  background-image: url("/static/images/background.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#login-card, #register-card, #change-password-card{
+  background-image: url("/static/images/log-reg-background.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+}
+
+#login-button{
+  background-image: url("/static/images/login-button.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: transparent;
+}
+
+#signin-button{
+  background-image: url("/static/images/sign-in.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: transparent;
+}
+
+#signout-button{
+  background-image: url("/static/images/sign-out.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: transparent;
+}
+
+#signup-button{
+  background-image: url("/static/images/sign-up.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: transparent;
+}
+
+#register-button{
+  background-image: url("/static/images/register.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: transparent;
+}
+
+#change-password{
+  background-image: url("/static/images/change-password.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: transparent;
+}
+
+#change-password-button{
+  background-image: url("/static/images/change-password.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: transparent;
+}
+
+#submit-button{
+  background-image: url("/static/images/submit-button.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: transparent;
+}
